@@ -1,6 +1,6 @@
 locals {
   capacity      = "mundose"
-  functionality = "pin2"
+  functionality = "pinfinal"
 
   resource_tags = {
     capacity      = local.capacity
