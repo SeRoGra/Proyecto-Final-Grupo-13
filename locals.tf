@@ -1,6 +1,6 @@
 locals {
   capacity      = "mundose"
-  functionality = "pinfinal"
+  functionality = "pin2"
 
   resource_tags = {
     capacity      = local.capacity
@@ -11,8 +11,8 @@ locals {
 }
 
 locals {
-  vpc_id    = "vpc-0c7b99973da428a73"
-  subnet_id = "subnet-064998e47c2bed4f2"
+  vpc_id    = "vpc-02fe81f1f7effa35b"
+  subnet_id = "subnet-0e016bf7fe6a285a1"
 }
 
 locals {

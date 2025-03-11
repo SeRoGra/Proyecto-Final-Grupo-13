@@ -17,7 +17,7 @@ module "security_group" {
 
 resource "aws_key_pair" "mundose_pin_final" {
   key_name   = local.keypair_name
-  public_key = file("./.ssh/key-mundose-pin2.pub")
+  public_key = file("./.ssh/key-mundose-pin_final.pub")
 }
 
 module "ec2" {
@@ -35,6 +35,7 @@ module "ec2" {
   monitoring             = false
   vpc_security_group_ids = [module.security_group.security_group_id]
   subnet_id              = local.subnet_id
+  user_data              = null
 
   tags = local.resource_tags
 
