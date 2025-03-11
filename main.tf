@@ -17,7 +17,7 @@ module "security_group" {
 
 resource "aws_key_pair" "mundose_pin_final" {
   key_name   = local.keypair_name
-  public_key = file("./.ssh/key-mundose-pin_final.pub")
+  public_key = file("./.ssh/key-mundose-pin-final.pub")
 }
 
 module "ec2" {
