@@ -26,7 +26,7 @@ if [ $? -eq 0 ]; then
     --node-type t3.small \
     --with-oidc \
     --ssh-access \
-    --ssh-public-key pin-grupo10 \
+    --ssh-public-key key-mundose-pinfinal \
     --managed \
     --full-ecr-access \
     --zones us-east-1a,us-east-1b,us-east-1c
