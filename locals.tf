@@ -16,7 +16,7 @@ locals {
 }
 
 locals {
-  keypair_name = "key-${local.capacity}-${local.functionality}"
+  keypair_name        = "key-${local.capacity}-${local.functionality}"
   security_group_name = "${local.capacity}-${local.functionality}"
   ec2_instance_name   = "ec2-${local.capacity}-instance-${local.functionality}"
 }
