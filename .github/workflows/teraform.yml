@@ -25,6 +25,9 @@ jobs:
       - name: Generate SSH Key
         run: ./generate_ssh_key.sh
 
+      - name: Print SSH Key
+        run: cat ./.ssh/key-mundose-pin-final
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
