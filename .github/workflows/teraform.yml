@@ -56,19 +56,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Grant execute permissions to generate_ssh_key.sh
-        run: chmod +x generate_ssh_key.sh
-      
-      - name: Generate SSH Key
-        run: ./generate_ssh_key.sh
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_wrapper: false
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -reconfigure
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
