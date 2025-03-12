@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master  # O la rama que prefieras
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Deploy Tools to EC2 Instance'
+        required: true
+        type: choice
+        options:
+          - deploy
 
 jobs:
   deploy:
