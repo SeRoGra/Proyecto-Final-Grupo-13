@@ -6,11 +6,16 @@ terraform {
       version = "5.31.0"
     }
   }
-  backend "local" {}
+  backend "s3" {
+    bucket         = "s3-mundose-terraform"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "dynamo-terraform-lock"
+  }
 }
 
 provider "aws" {
   region  = "us-east-1"
   alias   = "main"
-  profile = "default"
 }
